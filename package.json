@@ -11,8 +11,13 @@
     "react-websocket": "^1.2.0"
   },
   "scripts": {
+    // TODO: create clean local / dev / prod envs
     "start": "react-scripts start 127.0.0.1:3000",
-    "build": "react-scripts build",
+    "start:local": "SET \"REACT_APP_NODE_ENV=local\" && npm start",
+    "start:production": "SET \"REACT_APP_NODE_ENV=production\" && npm start",
+    "build": "webpack build",
+    "build:local": "SET \"REACT_APP_NODE_ENV=local\" && npm build",
+    "build:production": "SET \"REACT_APP_NODE_ENV=production\" && npm build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
@@ -22,6 +27,8 @@
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "style-loader": "^0.18.2",
     "webpack": "^3.6.0",
     "webpack-bundle-tracker": "^0.2.0"
   }
