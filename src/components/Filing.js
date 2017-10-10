@@ -34,10 +34,10 @@ export default class Filing extends Component
     this.refresh();
   }
 
-  
+
   refresh() {
-    /*  
-    Refreshes the state. Create an array with each element representing a card 
+    /*
+    Refreshes the state. Create an array with each element representing a card
     that contains information on transactions reported to the SEC
     */
 
@@ -65,7 +65,7 @@ export default class Filing extends Component
           </div>
         )
       }
-      
+
     }
 
     // Set the state of the json data and the divs that will be rendered
@@ -83,13 +83,9 @@ export default class Filing extends Component
   render() {
     return (
       <div>
-      <FlipMove
-        staggerDurationBy="30"
-        duration={600}>
-
-          {this.state.divs}
-
-      </FlipMove>
+        <FlipMove staggerDurationBy="30" duration={600}>
+            {this.state.divs}
+        </FlipMove>
       </div>
     );
   }
